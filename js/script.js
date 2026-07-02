@@ -53,3 +53,27 @@ addButton.addEventListener("click", function(event){
     wishlist.appendChild(item);
     wishlistInput.value=""
 })
+
+const feedbackForm=document.getElementById("feedbackForm");
+const name=document.getElementById("name");
+const email=document.getElementById("email");
+const message=document.getElementById("message");
+const feedback=document.getElementById("feedback");
+
+feedbackForm.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    if(name.value==="" ||
+        email.value===""||
+        message.value===""
+    ){
+        feedback.textContent="Please complete all fields"
+        return;
+    }
+
+    feedback.innerHTML=
+    "<strong>Feedback sent successfully!</strong><br>" +
+    "Thank you, "+name.value
+
+    feedbackForm.reset();
+})

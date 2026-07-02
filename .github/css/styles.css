@@ -403,19 +403,38 @@ main{
     padding: 40px 20px;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.contact-info a {
+.contact-card{
+    padding: 20px;
+    background-color: var(--col-cream);
+    border-left: 4px solid var(--col-cyan-light);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-card h3{
+    font-family: 'Young Serif', serif;
+    margin-bottom: 15px;
+}
+
+.contact-card p{
+    font-family: 'Instrument Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.contact-card a{
     color: var(--col-bg-deep);
     text-decoration: none;
     font-weight: bold;
 }
 
-.contact-info a:hover {
+.contact-card a:hover{
     text-decoration: underline;
 }
  footer{
@@ -445,6 +464,9 @@ main{
     #Contact {
         flex-direction: column;
     }
+    .contact-info{
+    grid-template-columns: 1fr;
+}
 }
 @media (max-width: 480px){
 
@@ -544,4 +566,48 @@ main{
 #wishlist li button:hover{
     background-color: var(--col-muted);
 }
- 
+ #contactForm{
+    width: 70%;
+    margin: 30px auto;
+}
+
+#contactForm input,
+#contactForm textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+
+    border: 1px solid var(--col-muted);
+    border-radius: 5px;
+
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1em;
+}
+
+#contactForm textarea{
+    resize: vertical;
+}
+
+#contactForm button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--col-bg-deep);
+    color: var(--col-cream);
+
+    cursor: pointer;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+#contactForm button:hover{
+    background-color: var(--col-muted);
+}
+
+#feedback{
+    margin: 20px 0;
+    text-align: center;
+
+    font-family: 'Instrument Sans', sans-serif;
+    color: var(--col-bg-deep);
+}
