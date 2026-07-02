@@ -47,12 +47,41 @@ addButton.addEventListener("click", function(event){
 
     deleteButton.addEventListener("click", function(event){
         item.remove();
+        saveWishlist();
     })
 
     item.appendChild(deleteButton);
     wishlist.appendChild(item);
+    saveWishlist();
     wishlistInput.value=""
 })
+function saveWishlist(){
+    let items=[];
+    document.querySelector("#wishlist li").forEach(function(item){
+        items.push(item.firstChild.textContent);
+
+    })
+
+    localStorage.setItem("wishList", JSON.stringify(items))
+}
+function loadWishlist(){
+    const items=JSON.parse(localStorage.getItem("wishlist")) || []
+    items.forEach(function(name){
+        const item= document.createElement("li")
+        item.textContent=name;
+        const deleteButton=document.createElement("button")
+        deleteButton.textContent="Delete"
+        deleteButton.addEventListener("click", function(event){
+           item.remove();
+        saveWishlist(); 
+        })
+        item.appendChild(deleteButton);
+    wishlist.appendChild(item);
+    saveWishlist();
+    wishlistInput.value=""
+    })
+}
+loadWishlist();
 
 const feedbackForm=document.getElementById("feedbackForm");
 const name=document.getElementById("name");
