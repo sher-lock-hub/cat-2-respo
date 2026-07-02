@@ -611,3 +611,11 @@ main{
     font-family: 'Instrument Sans', sans-serif;
     color: var(--col-bg-deep);
 }
+.owner-bio{
+    display: none;
+    margin-top: 10px;
+}
+
+.owner-bio.show{
+    display: block;
+}

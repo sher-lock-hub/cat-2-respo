@@ -77,3 +77,10 @@ feedbackForm.addEventListener("submit", function(event){
 
     feedbackForm.reset();
 })
+ const joyBanner=document.getElementById("joyBanner")
+ const patienceBanner=document.getElementById("patienceBanner")
+ const ownerbio=document.getElementById("owner-bio")
+
+ joyBanner.addEventListener("click" ,function(event){
+    ownerbio.classList.toggle("show")
+ })
