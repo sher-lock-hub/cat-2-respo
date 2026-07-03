@@ -1,0 +1,29 @@
+STEP ONE:Creating two respos
+This was pretty easy given that we did in class so i jsut follwed
+the instructions and what we did in class.
+
+STEP TWO:Loop rendered dynamic content
+For my website, I chose to implement this in theshop by category 
+part. So i created the array,
+but mine has three attributes, name image and link
+Then i looped so for each category, create element and class name
+then code inner html 
+$- template literal interpolation
+
+STEP THREE:Wish list
+I used a similars structure as GTA in terms of simplicity
+
+STEP FOUR:Feedback form
+I added this into my contact us section but i changed the structure 
+of that section a bit so that it blends well with the form
+
+STEP FIVE:Click to reveal banner
+I choose to user the owner bio for this part
+
+STEP SIX:Local storage
+So for this it's the wish lis
+So when someone refreshes the page the wishlist is still there
+saveWishlist() is a function that saves the current wishlist to the browser's localStorage. Whenever a user adds or removes a jewellery item, the function collects all the items currently displayed in the wishlist and stores them so that they are not lost when the page is refreshed.
+
+loadWishlist() is a function that retrieves the saved wishlist from localStorage when the page loads. It reads the previously stored items and recreates them in the wishlist so that the user can continue where they left off, even after closing or refreshing the browser.
+

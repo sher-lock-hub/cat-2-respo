@@ -16,6 +16,7 @@ const categories =[
 ];
 
 categories.forEach(function(category){
+    const shopCategory = document.querySelector(".shop-category");
     const card=document.createElement("div");
     card.className="category";
 
@@ -57,12 +58,12 @@ addButton.addEventListener("click", function(event){
 })
 function saveWishlist(){
     let items=[];
-    document.querySelector("#wishlist li").forEach(function(item){
+    document.querySelectorAll("#wishlist li").forEach(function(item){
         items.push(item.firstChild.textContent);
 
     })
 
-    localStorage.setItem("wishList", JSON.stringify(items))
+    localStorage.setItem("wishlist", JSON.stringify(items))
 }
 function loadWishlist(){
     const items=JSON.parse(localStorage.getItem("wishlist")) || []
@@ -106,10 +107,17 @@ feedbackForm.addEventListener("submit", function(event){
 
     feedbackForm.reset();
 })
- const joyBanner=document.getElementById("joyBanner")
- const patienceBanner=document.getElementById("patienceBanner")
- const ownerbio=document.getElementById("owner-bio")
+ const owners = document.querySelectorAll(".owner");
 
- joyBanner.addEventListener("click" ,function(event){
-    ownerbio.classList.toggle("show")
- })
+owners.forEach(function(owner) {
+
+    const image = owner.querySelector("img");
+
+    image.addEventListener("click", function() {
+
+        const bio = owner.querySelector(".owner-bio");
+        bio.classList.toggle("show");
+
+    });
+
+});

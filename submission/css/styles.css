@@ -566,13 +566,13 @@ main{
 #wishlist li button:hover{
     background-color: var(--col-muted);
 }
- #contactForm{
+ #feedbackForm{
     width: 70%;
     margin: 30px auto;
 }
 
-#contactForm input,
-#contactForm textarea{
+#feedbackForm input,
+#feedbackForm textarea{
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -584,11 +584,11 @@ main{
     font-size: 1em;
 }
 
-#contactForm textarea{
+#feedbackForm textarea{
     resize: vertical;
 }
 
-#contactForm button{
+#feedbackForm button{
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -600,7 +600,7 @@ main{
     font-family: 'Instrument Sans', sans-serif;
 }
 
-#contactForm button:hover{
+#feedbackForm button:hover{
     background-color: var(--col-muted);
 }
 
