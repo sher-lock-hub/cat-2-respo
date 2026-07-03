@@ -27,3 +27,5 @@ saveWishlist() is a function that saves the current wishlist to the browser's lo
 
 loadWishlist() is a function that retrieves the saved wishlist from localStorage when the page loads. It reads the previously stored items and recreates them in the wishlist so that the user can continue where they left off, even after closing or refreshing the browser.
 
+STEP SIX:Deployment
+This was  done using render as demonstrated in class
